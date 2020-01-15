@@ -10,8 +10,11 @@ import { AppState } from './../app.state';
   styleUrls: ['./read.component.css']
 })
 export class ReadComponent implements OnInit {
-
-  constructor() { }
+   
+  tutorials: Observable<Tutorial[]>;
+  constructor(private store: Store<AppState>) { 
+    this.tutorials = store.select('tutorial');
+  }
 
   ngOnInit() {
   }
