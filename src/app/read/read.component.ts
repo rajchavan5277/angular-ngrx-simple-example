@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
-import { Tutorial } from './../models/tutorial.model';
+import { Tutorial } from '../model/tutorial.model';
 import { AppState } from './../app.state';
 import * as TutorialActions from '../action/tutorial.action';
 
@@ -21,8 +21,6 @@ export class ReadComponent implements OnInit {
   }
 
   delTutorial(index) {
-    console.log("delete tutorial");
     this.store.dispatch(new TutorialActions.RemoveTutorial(index) )
   }
-
 }

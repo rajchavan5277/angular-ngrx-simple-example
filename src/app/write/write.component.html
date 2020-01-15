@@ -1,12 +1,13 @@
 <div class="container">
 	<div class="left row">
-		<div class="form-group">
-			<input type="text" class="form-control" placeholder="name" #name>
-</div>
+		<div class="col-md-12">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="url" #url>
-</div>
-
+				<input type="text" class="form-control" placeholder="name" #name>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="url" #url>
+      </div>
+    </div>
 				<button class="btn btn-primary" (click)="addTutorial(name.value,url.value)">Add a Tutorial</button>
 			</div>
 		</div>
